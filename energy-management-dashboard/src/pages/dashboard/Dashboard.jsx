@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import imgNotification from "../../assets/notification.png";
 import imgAnalytics from "../../assets/carbon_analytics.png";
 import imgDashboard from "../../assets/dashboard.png";
@@ -7,8 +8,8 @@ import imgLogo from "../../assets/logo-no-background.png";
 import styles from "./Dashboard.module.scss";
 import { useNavigate } from "react-router";
 import DashboardTab from "./tab/dashboard/DashboardTab";
-import Analyse from "./tab/analyse/Analyse"
-import Notification from "./tab/notification/Notification"
+import Analyse from "./tab/analyse/Analyse";
+import Notification from "./tab/notification/Notification";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -40,7 +41,9 @@ function Dashboard() {
     <div className={styles.dashboardContainer}>
       <div className={styles.sidebar}>
         <div className={styles.logo}>
-          <img src={imgLogo} alt="Energy Management" />
+          <Link to="/">
+            <img src={imgLogo} alt="Energy Management" />
+          </Link>
         </div>
         <nav>
           <ul>
@@ -82,9 +85,7 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className={styles.content}>
-        {renderContent()}
-      </div>
+      <div className={styles.content}>{renderContent()}</div>
     </div>
   );
 }
