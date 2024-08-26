@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ispmLogo from "../../assets/logo_ispm.png"
+import logoBrand from "../../assets/ems-favicon.png"
 import styles from "./Login.module.scss";
 
 function Login() {
@@ -23,30 +25,19 @@ function Login() {
     <div className={styles.loginWrapper}>
       <div className={styles.loginContainer}>
         <div className={styles.leftSide}>
+        <img src={ispmLogo} alt="ISPM Logo" className={styles.ispmLogo} />
+        <img src={logoBrand} alt="Logo" className={styles.logoBrand} />
           <h1>Bienvenue sur</h1>
-          <h2>Système de contrôle d'énergie</h2>
+          <h2>Energy Management System</h2>
           <p>
-            Le Système de contrôle d'énergie est un projet électronique et
+            <span>Energy Management System (EMS)</span> est un projet électronique et
             informatique qui vise à surveiller, mesurer et optimiser la
             consommation d'énergie électrique.
           </p>
         </div>
         <div className={styles.rightSide}>
           <h2>Connexion</h2>
-          {/* <form action="dashboard.html" method="POST">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com"/>
-                
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required placeholder="Entrez votre mot de passe"/>
-                
-                <div className={styles.rememberForgot}>
-                    <label><input type="checkbox" name="remember"/> Souviens-moi</label>
-                    <a href="#">Mots de passe oublié?</a>
-                </div>
-                
-                <button type="submit">Se connecter</button>
-            </form> */}
+
           <form onSubmit={handleSubmit}>
             <label htmlFor="email">E-mail</label>
             <input
@@ -54,7 +45,7 @@ function Login() {
               id="email"
               name="email"
               required
-              placeholder="johndoe@gmail.com"
+              placeholder="admin@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

@@ -1,85 +1,106 @@
-.loginWrapper{
-@apply flex justify-center items-center h-screen m-0;
+.loginWrapper {
+  @apply flex justify-center items-center h-screen m-0;
 
-    .loginContainer{
-        display: flex;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 800px;
-        max-width: 100%;
-    
-        .leftSide{
-            background-color: #eaf4f2;
-            padding: 40px;
-            flex: 1;
-            color: #2c3e50;
-        
-            h1{
-                font-size: 24px;
-            }
-        
-            h2{
-                font-size: 30px;
-                margin-top: 10px;
-            }
-        
-            p{
-                font-size: 14px;
-                margin-top: 20px;
-            }
+  .loginContainer {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 800px;
+    max-width: 100%;
+
+    .leftSide {
+      @apply relative;
+      background-color: #eaf4f2;
+      padding: 40px;
+      flex: 1;
+      color: #2c3e50;
+
+      /* Style pour le logo ISPM */
+      .ispmLogo {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 20px;
+
+        width: 75px; /* Ajustez la taille du logo si nécessaire */
+      }
+
+      .logoBrand {
+        border-radius: 12px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 75px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        color: #d09632;
+        font-size: 30px;
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-top: 20px;
+
+        span {
+          @apply font-bold;
+          // color: #D09632;
         }
-    
-        .rightSide{
-            padding: 40px;
-            flex: 1;
-        
-            h2{
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-        
-            form {
-                @apply flex flex-col
-            }
-        
-            label {
-                @apply text-sm;
-                margin-bottom: 5px;
-            }
-        
-            input {
-                padding: 10px;
-                font-size: 16px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-                border: 1px solid #ccc;
-            }
-        
-            .rememberForgot {
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-bottom: 20px;
-            }
-        
-            button {
-                padding: 10px;
-                background-color: #1abc9c;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-        
-            button:hover {
-                background-color: #16a085;
-            }
-        }
+      }
     }
+
+    .rightSide {
+      padding: 40px;
+      flex: 1;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      form {
+        @apply flex flex-col;
+      }
+
+      label {
+        @apply text-sm;
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .rememberForgot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #1abc9c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #16a085;
+      }
+    }
+  }
 }
-
-
-
