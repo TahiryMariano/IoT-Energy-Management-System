@@ -7,12 +7,17 @@ import {
 import App from './App.jsx'
 import './index.scss'
 import Login from './pages/login/Login.jsx';
+import Dashboard from './pages/dashboard/Dashboard.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login/>,
   },
+  {
+    path:'/dashboard',
+    element: <Dashboard/>
+  }
 ]);
 
 
