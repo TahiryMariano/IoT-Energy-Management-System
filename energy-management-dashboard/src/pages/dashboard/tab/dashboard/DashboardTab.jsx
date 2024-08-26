@@ -1,5 +1,5 @@
 import React from "react";
-import imgUser from "../../../../assets/user.png";
+import imgIspm from "../../../../assets/logo_ispm.png";
 import styles from "./DashboardTab.module.scss";
 import EnergyConsumptionChart from "../../../../components/EnergyConsumptionChart";
 
@@ -9,7 +9,7 @@ function DashboardTab() {
       <header>
         <h1>Tableau de bord</h1>
         <div className={styles.userProfile}>
-          <img src={imgUser} alt="User" />
+          <img src={imgIspm} alt="Ispm" />
         </div>
       </header>
 
