@@ -13,8 +13,12 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
     .logo {
+      @apply flex items-center justify-center rounded-md p-2;
+      // border: 1px solid #253D5B;
+      // background: #253D5B;
       max-width: 100%;
       img {
+        @apply w-96;
         max-width: 100%;
       }
     }
@@ -35,14 +39,16 @@
             font-size: 16px;
             color: #2c3e50;
 
-            &:active {
-              font-weight: bold;
-              color: #1abc9c;
-            }
+            
 
             img{
               @apply h-6 w-6;
             }
+          }
+
+          .active {
+            font-weight: bold;
+            color: #1abc9c;
           }
         }
       }
